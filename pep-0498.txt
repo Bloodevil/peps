@@ -1,7 +1,7 @@
 PEP: 498
-Title: Literal String Interpolation
-Version: $Revision$
-Last-Modified: $Date$
+제목: Literal String Interpolation
+버전: $Revision$
+마지막 수정: $Date$
 Author: Eric V. Smith <eric@trueblade.com>
 Status: Final
 Type: Standards Track
@@ -11,20 +11,18 @@ Python-Version: 3.6
 Post-History: 07-Aug-2015, 30-Aug-2015, 04-Sep-2015, 19-Sep-2015, 06-Nov-2016
 Resolution: https://mail.python.org/pipermail/python-dev/2015-September/141526.html
 
-Abstract
+요약
 ========
 
-Python supports multiple ways to format text strings. These include
-%-formatting [#]_, ``str.format()`` [#]_, and ``string.Template``
-[#]_. Each of these methods have their advantages, but in addition
-have disadvantages that make them cumbersome to use in practice. This
-PEP proposed to add a new string formatting mechanism: Literal String
-Interpolation. In this PEP, such strings will be referred to as
-"f-strings", taken from the leading character used to denote such
-strings, and standing for "formatted strings".
+Python은 문자 형식을 지원하는 여러가지 방법을 가지고 있습니다. 
+이 방법중에는 %-포멧팅 [#]_, ``str.format()`` [#]_, 그리고 ``string.Template``
+[#]_ 가 있습니다. 각각의 메소드에는 저마다의 잇점이 있지만, 어쩔때는
+각각 성가신 단점도 가지고 있습니다. 이 PEP 제안은 새로운 포멧인 리터럴 문자 보간법을
+위해 제안되었습니다. 이 PEP에서 문자들은 "f-string"이라고 하며, 이러한
+문자를 나타내는 데 사용되는 선행 문자를 가져와서 형식화된 문자를 나타내는데
+사용됩니다. 
 
-This PEP does not propose to remove or deprecate any of the existing
-string formatting mechanisms.
+이 PEP는 이미 있던 문자열 포멧을 없댄다거나, 바꾸는 제안을 하지는 않습니다.
 
 F-strings provide a way to embed expressions inside string literals,
 using a minimal syntax. It should be noted that an f-string is really
