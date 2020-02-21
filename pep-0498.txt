@@ -22,14 +22,12 @@ Python은 문자 형식을 지원하는 여러가지 방법을 가지고 있습�
 문자를 나타내는 데 사용되는 선행 문자를 가져와서 형식화된 문자를 나타내는데
 사용됩니다. 
 
-이 PEP는 이미 있던 문자열 포멧을 없댄다거나, 바꾸는 제안을 하지는 않습니다.
+이 PEP는 이미 있던 문자열 포멧을 없애거나, 바꾸는 제안을 하지는 않습니다.
 
-F-strings provide a way to embed expressions inside string literals,
-using a minimal syntax. It should be noted that an f-string is really
-an expression evaluated at run time, not a constant value. In Python
-source code, an f-string is a literal string, prefixed with 'f', which
-contains expressions inside braces. The expressions are replaced with
-their values. Some examples are::
+F-string은 문자열 안에서 최소한의 신택스만 사용하여 임배드된 형식을 지원합니다.
+f-string은 표현되는 문자 대신 런타임에 생성되는 표현식입니다. python 소스코드에서
+f-string은 리터럴 문자열이며, 접두사 안에 f라는 접두사가 붙게되면 { }로 감싸진
+코드는 해당 값으로 바뀌게 됩니다. 예를 들어봅시다 :
 
   >>> import datetime
   >>> name = 'Fred'
@@ -40,12 +38,11 @@ their values. Some examples are::
   >>> f'He said his name is {name!r}.'
   "He said his name is 'Fred'."
 
-A similar feature was proposed in PEP 215. PEP 215 proposed to support
-a subset of Python expressions, and did not support the type-specific
-string formatting (the ``__format__()`` method) which was introduced
-with PEP 3101.
+이것과 유사한 기능이 PEP 215에서 제안되었습니다. PEP 215는 Python 표현식의
+일부를 지원하도록 제안했으며, pep 3101에 도입된 타입별 문자 포멧 (__format__() 메소드)
+을 지원하지 않았습니다. 
 
-Rationale
+원리
 =========
 
 This PEP is driven by the desire to have a simpler way to format
